@@ -6,41 +6,233 @@
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
   <title>Phya Williams | Cloud Engineer Portfolio</title>
   <style>
-/* --- GLOBAL STYLES --- */
-body {
-  margin: 0;
-  font-family: "Inter", sans-serif;
-  line-height: 1.6;
-  background: #fdfdfd;
-  color: #3c2a4d;
-  scroll-behavior: smooth;
-  transition: background 0.3s, color 0.3s;
-  font-weight: 400;
-}
-h1, h2, h3 {
-  font-family: "Inter", sans-serif;
-  font-weight: 600;
-  color: #3c2a4d;
-  transition: color 0.3s;
-}
-.hero h1 {
-  font-size: 3em;
-  font-weight: 700;
-  letter-spacing: -0.5px;
-}
+    /* --- GLOBAL STYLES --- */
+    body {
+      margin: 0;
+      font-family: "Inter", sans-serif;
+      line-height: 1.6;
+      background: #fdfdfd;
+      color: #3c2a4d;
+      scroll-behavior: smooth;
+      transition: background 0.3s, color 0.3s;
+    }
+    h1, h2, h3 {
+      color: #3c2a4d;
+      transition: color 0.3s;
+    }
+    a {
+      text-decoration: none;
+      color: inherit;
+    }
+    section {
+      padding: 60px 20px;
+      max-width: 1000px;
+      margin: auto;
+      opacity: 0;
+      transform: translateY(30px);
+      transition: all 0.6s ease-out;
+    }
+    section.visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
 
-/* Dark Mode */
-body.dark {
-  background: #1e1e2e;
-  color: #f5f5f5;
-}
-body.dark h1, body.dark h2, body.dark h3 {
-  color: #f7c6d9;
-}
-/* Override hero name to keep a dark tone in dark mode */
-body.dark .hero h1 {
-  color: #3c2a4d; /* stays bold + dark */
-}
+    /* --- SECTION HEADERS --- */
+    section h2 {
+      font-size: 22px;
+      margin-bottom: 20px;
+      padding: 10px 14px;
+      background: linear-gradient(to right, #f7c6d9, #cbb7f0, #a7c7e7);
+      color: #3c2a4d;
+      font-weight: 600;
+      border-radius: 6px;
+      display: inline-block;
+    }
+
+    /* --- DIVIDERS --- */
+    .divider {
+      height: 2px;
+      background: linear-gradient(90deg, #f7c6d9, #cbb7f0, #a7c7e7, #b2e2c9);
+      margin: 30px auto;
+      border-radius: 2px;
+      max-width: 900px;
+    }
+
+    /* --- NAVBAR --- */
+    nav {
+      position: sticky;
+      top: 0;
+      background: linear-gradient(90deg, #f7c6d9, #cbb7f0, #a7c7e7, #b2e2c9);
+      color: #3c2a4d;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 20px;
+      padding: 15px;
+      z-index: 10;
+    }
+    nav a {
+      color: #3c2a4d;
+      font-weight: 600;
+      transition: color 0.3s;
+    }
+    nav a:hover {
+      color: #6a4c93;
+    }
+    #dark-toggle {
+      margin-left: auto;
+      cursor: pointer;
+      background: #3c2a4d;
+      color: #fff;
+      border: none;
+      padding: 8px 12px;
+      border-radius: 6px;
+      font-weight: bold;
+      transition: 0.3s;
+    }
+    #dark-toggle:hover {
+      background: #fff;
+      color: #3c2a4d;
+    }
+
+    /* --- HERO --- */
+    .hero {
+      text-align: center;
+      background: linear-gradient(to right, #f7c6d9, #cbb7f0, #a7c7e7);
+      color: #3c2a4d;
+      padding: 100px 20px;
+    }
+    .hero h1 {
+      font-size: 3em;
+      font-weight: 700;
+    }
+    .hero p {
+      margin: 10px 0;
+      font-size: 1.1em;
+    }
+    .btn {
+      display: inline-block;
+      background: #3c2a4d;
+      color: #fff;
+      padding: 10px 20px;
+      border-radius: 6px;
+      margin-top: 15px;
+      font-weight: bold;
+      transition: 0.3s;
+    }
+    .btn:hover {
+      background: #f7c6d9;
+      color: #3c2a4d;
+    }
+
+    /* --- EXPERIENCE & PROJECT CARDS --- */
+    .card {
+      background: #fff;
+      padding: 20px;
+      margin: 15px 0;
+      border-radius: 8px;
+      border: 2px solid #e0d7f5;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+      transition: background 0.3s, color 0.3s, transform 0.2s;
+    }
+    .card h3 {
+      margin-top: 0;
+      color: #6a4c93;
+    }
+    .card:hover {
+      transform: translateY(-4px);
+    }
+
+    /* --- PROJECTS GRID --- */
+    .projects-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 20px;
+    }
+    .project-tile {
+      background: #fff;
+      border: 2px solid #e0d7f5;
+      border-radius: 8px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+      overflow: hidden;
+      transition: transform 0.2s;
+    }
+    .project-tile img {
+      width: 100%;
+      height: 180px;
+      object-fit: cover;
+    }
+    .project-tile h3 {
+      margin: 12px;
+      color: #6a4c93;
+    }
+    .project-tile p {
+      margin: 0 12px 12px;
+      font-size: 0.95em;
+    }
+    .project-tile:hover {
+      transform: translateY(-5px);
+    }
+
+    /* --- SKILLS --- */
+    .skills-grid {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+    }
+    .skill {
+      background: #e6f0ff;
+      padding: 10px 15px;
+      border-radius: 20px;
+      font-size: 0.9em;
+      font-weight: 500;
+      color: #3c2a4d;
+      transition: background 0.3s;
+    }
+    .skill:hover {
+      background: #f7c6d9;
+    }
+
+    /* --- FOOTER --- */
+    footer {
+      text-align: center;
+      padding: 20px;
+      background: linear-gradient(90deg, #f7c6d9, #cbb7f0, #a7c7e7, #b2e2c9);
+      color: #3c2a4d;
+      transition: background 0.3s;
+    }
+
+    /* --- DARK MODE --- */
+    body.dark {
+      background: #1e1e2e;
+      color: #f5f5f5;
+    }
+    body.dark h1, body.dark h2, body.dark h3 {
+      color: #f7c6d9;
+    }
+    body.dark .hero h1 {
+      color: #3c2a4d;
+    }
+    body.dark nav {
+      background: #2c2c3e;
+    }
+    body.dark nav a {
+      color: #f7c6d9;
+    }
+    body.dark .card, 
+    body.dark .project-tile {
+      background: #2c2c3e;
+      color: #f5f5f5;
+      border-color: #444;
+    }
+    body.dark .skill {
+      background: #3c2a4d;
+      color: #fff;
+    }
+    body.dark footer {
+      background: #2c2c3e;
+      color: #f7c6d9;
+    }
   </style>
 </head>
 <body>
@@ -62,8 +254,8 @@ body.dark .hero h1 {
     <p>Cloud Engineer | SRE | Apprentice</p>
     <p>Tampa, FL | phya.williams@gmail.com | 813.499.7942</p>
     <a href="https://www.linkedin.com" target="_blank" class="btn">Connect on LinkedIn</a>
-    <a href="resume.html" target="_blank" class="btn"> View Resume</a>
-    <a href="resume.pdf" download class="btn"> Download Resume</a>
+    <a href="resume.html" target="_blank" class="btn">View Resume</a>
+    <a href="resume.pdf" download class="btn">Download Resume</a>
   </header>
 
   <!-- ABOUT -->
@@ -72,43 +264,91 @@ body.dark .hero h1 {
     <p>Multi-platform certified Cloud Engineer with hands-on experience in cloud computing, virtualization, and IT support. Skilled in AWS, Azure, and Oracle Cloud, with a passion for optimizing cloud solutions and system performance.</p>
   </section>
 
+  <div class="divider"></div>
+
   <!-- EXPERIENCE -->
   <section id="experience">
     <h2>Professional Experience</h2>
-    <!-- Your experience cards here -->
+    <div class="card">
+      <h3>Cloud Delivery IaaS SRE – Infrastructure Engineer (Apprenticeship)</h3>
+      <p><strong>Major Tech Company • July 2025 – Present</strong></p>
+      <p>Support infrastructure engineering initiatives in IaaS delivery. Hands-on with automation, monitoring, and scaling cloud systems.</p>
+    </div>
+    <div class="card">
+      <h3>Junior Cloud Support Engineer</h3>
+      <p><strong>People Shores • March 2025 – Current</strong></p>
+      <p>Provided cloud support for clients using AWS and Azure services. Monitored performance and optimized resources.</p>
+    </div>
   </section>
+
+  <div class="divider"></div>
 
   <!-- PROJECTS -->
   <section id="projects">
     <h2>Projects</h2>
-    <!-- Your projects here -->
+    <div class="projects-grid">
+      <div class="project-tile">
+        <img src="https://via.placeholder.com/400x200.png?text=Capstone+Project" alt="Capstone Project">
+        <h3>Capstone Project</h3>
+        <p>Designed and implemented a multi-cloud infrastructure with AWS & Azure for performance testing and scalability.</p>
+      </div>
+      <div class="project-tile">
+        <img src="https://via.placeholder.com/400x200.png?text=Church+Website" alt="Church Website">
+        <h3>Church Website</h3>
+        <p>Developed and deployed a modern responsive site for a local church community, improving engagement and accessibility.</p>
+      </div>
+    </div>
   </section>
+
+  <div class="divider"></div>
 
   <!-- EDUCATION -->
   <section id="education">
     <h2>Education & Certifications</h2>
-    <!-- Your education here -->
+    <div class="card">
+      <p><strong>Cloud Computing & Virtualization</strong> | Erwin Technical College (2024–2025)</p>
+      <p><strong>Associate Degree in Computer Science</strong> | Hillsborough Community College (2019–2021)</p>
+      <p><strong>Certifications:</strong> Azure Fundamentals, AWS Cloud Practitioner, Azure AI Fundamentals, Oracle Cloud 2025, CompTIA Security+ (In Progress)</p>
+    </div>
   </section>
+
+  <div class="divider"></div>
 
   <!-- SKILLS -->
   <section id="skills">
     <h2>Technical Skills</h2>
-    <!-- Your skills here -->
+    <div class="skills-grid">
+      <div class="skill">AWS</div>
+      <div class="skill">Azure</div>
+      <div class="skill">Oracle Cloud</div>
+      <div class="skill">Python</div>
+      <div class="skill">PowerShell</div>
+      <div class="skill">Linux</div>
+      <div class="skill">Windows Server</div>
+      <div class="skill">Machine Learning</div>
+      <div class="skill">Cloud Security</div>
+    </div>
   </section>
+
+  <div class="divider"></div>
 
   <!-- COVER LETTER -->
   <section id="cover-letter">
     <h2>Cover Letter</h2>
-    <!-- Your cover letter text -->
+    <p>Dear Hiring Manager,</p>
+    <p>I am excited to apply for a technical role where I can leverage my cloud computing skills and customer service background. With certifications across AWS, Azure, and Oracle Cloud, I bring strong technical expertise combined with proven teamwork and problem-solving experience. My apprenticeship and prior roles demonstrate my commitment to learning and adapting quickly in fast-paced environments.</p>
+    <p>I would love the opportunity to contribute to your team’s success. Thank you for your time and consideration.</p>
   </section>
+
+  <div class="divider"></div>
 
   <!-- CONTACT -->
   <section id="contact">
     <h2>Contact</h2>
-    <p> 813.499.7942</p>
-    <p> <a href="mailto:phya.williams@gmail.com">phya.williams@gmail.com</a></p>
-    <p> <a href="https://www.linkedin.com" target="_blank">LinkedIn</a></p>
-    <a href="resume.pdf" download class="btn"> Download Resume</a>
+    <p>813.499.7942</p>
+    <p><a href="mailto:phya.williams@gmail.com">phya.williams@gmail.com</a></p>
+    <p><a href="https://www.linkedin.com" target="_blank">LinkedIn</a></p>
+    <a href="resume.pdf" download class="btn">Download Resume</a>
   </section>
 
   <footer>
