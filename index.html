@@ -1,4 +1,11 @@
-/* --- GLOBAL STYLES --- */
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Phya Williams | Cloud Engineer Portfolio</title>
+  <style>
+    /* --- GLOBAL STYLES --- */
 body {
   margin: 0;
   font-family: "Poppins", "Fira Sans", sans-serif;
@@ -168,3 +175,102 @@ body.dark footer {
   background: #2c2c3e;
   color: #f7c6d9;
 }
+
+  </style>
+</head>
+<body>
+  <!-- NAVBAR -->
+  <nav>
+    <a href="#about">About</a>
+    <a href="#experience">Experience</a>
+    <a href="#projects">Projects</a>
+    <a href="#education">Education</a>
+    <a href="#skills">Skills</a>
+    <a href="#cover-letter">Cover Letter</a>
+    <a href="#contact">Contact</a>
+    <button id="dark-toggle">🌙 Dark</button>
+  </nav>
+
+  <!-- HERO -->
+  <header class="hero">
+    <h1>Phya Williams</h1>
+    <p>Cloud Engineer | SRE | Apprentice</p>
+    <p>📍 Tampa, FL | 📧 phya.williams@gmail.com | 📱 813.499.7942</p>
+    <a href="https://www.linkedin.com" target="_blank" class="btn">Connect on LinkedIn</a>
+    <a href="resume.pdf" download class="btn">⬇️ Download Resume</a>
+  </header>
+
+  <!-- ABOUT -->
+  <section id="about">
+    <h2>About Me</h2>
+    <p>Multi-platform certified Cloud Engineer with hands-on experience in cloud computing, virtualization, and IT support. Skilled in AWS, Azure, and Oracle Cloud, with a passion for optimizing cloud solutions and system performance.</p>
+  </section>
+
+  <!-- EXPERIENCE -->
+  <section id="experience">
+    <h2>Professional Experience</h2>
+    <!-- Your experience cards here -->
+  </section>
+
+  <!-- PROJECTS -->
+  <section id="projects">
+    <h2>Projects</h2>
+    <!-- Your projects here -->
+  </section>
+
+  <!-- EDUCATION -->
+  <section id="education">
+    <h2>Education & Certifications</h2>
+    <!-- Your education here -->
+  </section>
+
+  <!-- SKILLS -->
+  <section id="skills">
+    <h2>Technical Skills</h2>
+    <!-- Your skills here -->
+  </section>
+
+  <!-- COVER LETTER -->
+  <section id="cover-letter">
+    <h2>Cover Letter</h2>
+    <!-- Your cover letter text -->
+  </section>
+
+  <!-- CONTACT -->
+  <section id="contact">
+    <h2>Contact</h2>
+    <p>📱 813.499.7942</p>
+    <p>📧 <a href="mailto:phya.williams@gmail.com">phya.williams@gmail.com</a></p>
+    <p>🔗 <a href="https://www.linkedin.com" target="_blank">LinkedIn</a></p>
+    <a href="resume.pdf" download class="btn">⬇️ Download Resume</a>
+  </section>
+
+  <footer>
+    <p>© 2025 Phya Williams</p>
+  </footer>
+
+  <!-- JAVASCRIPT -->
+  <script>
+    // DARK MODE TOGGLE
+    const toggleBtn = document.getElementById("dark-toggle");
+    toggleBtn.addEventListener("click", () => {
+      document.body.classList.toggle("dark");
+      toggleBtn.textContent = document.body.classList.contains("dark") ? "☀️ Light" : "🌙 Dark";
+    });
+
+    // SCROLL ANIMATIONS
+    const sections = document.querySelectorAll("section");
+    const revealOnScroll = () => {
+      const triggerBottom = window.innerHeight * 0.85;
+      sections.forEach(section => {
+        const top = section.getBoundingClientRect().top;
+        if (top < triggerBottom) {
+          section.classList.add("visible");
+        }
+      });
+    };
+    window.addEventListener("scroll", revealOnScroll);
+    revealOnScroll(); // initial check
+  </script>
+</body>
+</html>
