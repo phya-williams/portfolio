@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Phya Williams | Cloud Engineer Portfolio</title>
+  <style>
+    /* --- GLOBAL STYLES --- */
+    body {
+      margin: 0;
+      font-family: "Segoe UI", Tahoma, sans-serif;
+      line-height: 1.6;
+      background: #f9f9f9;
+      color: #333;
+      scroll-behavior: smooth;
+      transition: background 0.3s, color 0.3s;
+    }
+    h1, h2, h3 {
+      color: #1a3d7c;
+      transition: color 0.3s;
+    }
+    a {
+      text-decoration: none;
+      color: inherit;
+    }
+    section {
+      padding: 60px 20px;
+      max-width: 1000px;
+      margin: auto;
+      opacity: 0;
+      transform: translateY(30px);
+      transition: all 0.6s ease-out;
+    }
+    section.visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    /* --- NAVBAR --- */
+    nav {
+      position: sticky;
+      top: 0;
+      background: #1a3d7c;
+      color: #fff;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 20px;
+      padding: 15px;
+      z-index: 10;
+    }
+    nav a {
+      color: #fff;
+      font-weight: 500;
+      transition: color 0.3s;
+    }
+    nav a:hover {
+      color: #ffb347;
+    }
+    #dark-toggle {
+      margin-left: auto;
+      cursor: pointer;
+      background: #ffb347;
+      border: none;
+      padding: 8px 12px;
+      border-radius: 6px;
+      font-weight: bold;
+      transition: 0.3s;
+    }
+    #dark-toggle:hover {
+      background: #fff;
+      color: #1a3d7c;
+    }
+
+    /* --- HERO --- */
+    .hero {
+      text-align: center;
+      background: linear-gradient(to right, #1a3d7c, #4f6bb0);
+      color: white;
+      padding: 100px 20px;
+    }
+    .hero h1 {
+      font-size: 3em;
+    }
+    .hero p {
+      margin: 10px 0;
+    }
+    .btn {
+      display: inline-block;
+      background: #ffb347;
+      color: #1a3d7c;
+      padding: 10px 20px;
+      border-radius: 6px;
+      margin-top: 15px;
+      font-weight: bold;
+      transition: 0.3s;
+    }
+    .btn:hover {
+      background: #fff;
+      color: #1a3d7c;
+    }
+
+    /* --- EXPERIENCE & PROJECT CARDS --- */
+    .card {
+      background: white;
+      padding: 20px;
+      margin: 15px 0;
+      border-radius: 8px;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+      transition: background 0.3s, color 0.3s;
+    }
+    .card h3 {
+      margin-top: 0;
+    }
+
+    /* --- SKILLS --- */
+    .skills-grid {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+    }
+    .skill {
+      background: #e0e7ff;
+      padding: 10px 15px;
+      border-radius: 5px;
+      font-size: 0.9em;
+      font-weight: 500;
+      transition: background 0.3s;
+    }
+
+    /* --- FOOTER --- */
+    footer {
+      text-align: center;
+      padding: 20px;
+      background: #1a3d7c;
+      color: #fff;
+      transition: background 0.3s;
+    }
+
+    /* --- DARK MODE --- */
+    body.dark {
+      background: #1e1e2e;
+      color: #f5f5f5;
+    }
+    body.dark h1, body.dark h2, body.dark h3 {
+      color: #ffb347;
+    }
+    body.dark nav {
+      background: #111;
+    }
+    body.dark nav a {
+      color: #ffb347;
+    }
+    body.dark .card {
+      background: #2c2c3e;
+      color: #f5f5f5;
+    }
+    body.dark .skill {
+      background: #444;
+    }
+    body.dark footer {
+      background: #111;
+    }
+  </style>
+</head>
+<body>
+  <!-- NAVBAR -->
+  <nav>
+    <a href="#about">About</a>
+    <a href="#experience">Experience</a>
+    <a href="#projects">Projects</a>
+    <a href="#education">Education</a>
+    <a href="#skills">Skills</a>
+    <a href="#cover-letter">Cover Letter</a>
+    <a href="#contact">Contact</a>
+    <button id="dark-toggle">🌙 Dark</button>
+  </nav>
+
+  <!-- HERO -->
+  <header class="hero">
+    <h1>Phya Williams</h1>
+    <p>Cloud Engineer | SRE | Apprentice</p>
+    <p>📍 Tampa, FL | 📧 phya.williams@gmail.com | 📱 813.499.7942</p>
+    <a href="https://www.linkedin.com" target="_blank" class="btn">Connect on LinkedIn</a>
+    <a href="resume.pdf" download class="btn">⬇️ Download Resume</a>
+  </header>
+
+  <!-- ABOUT -->
+  <section id="about">
+    <h2>About Me</h2>
+    <p>Multi-platform certified Cloud Engineer with hands-on experience in cloud computing, virtualization, and IT support. Skilled in AWS, Azure, and Oracle Cloud, with a passion for optimizing cloud solutions and system performance.</p>
+  </section>
+
+  <!-- EXPERIENCE -->
+  <section id="experience">
+    <h2>Professional Experience</h2>
+    <!-- Your experience cards here -->
+  </section>
+
+  <!-- PROJECTS -->
+  <section id="projects">
+    <h2>Projects</h2>
+    <!-- Your projects here -->
+  </section>
+
+  <!-- EDUCATION -->
+  <section id="education">
+    <h2>Education & Certifications</h2>
+    <!-- Your education here -->
+  </section>
+
+  <!-- SKILLS -->
+  <section id="skills">
+    <h2>Technical Skills</h2>
+    <!-- Your skills here -->
+  </section>
+
+  <!-- COVER LETTER -->
+  <section id="cover-letter">
+    <h2>Cover Letter</h2>
+    <!-- Your cover letter text -->
+  </section>
+
+  <!-- CONTACT -->
+  <section id="contact">
+    <h2>Contact</h2>
+    <p>📱 813.499.7942</p>
+    <p>📧 <a href="mailto:phya.williams@gmail.com">phya.williams@gmail.com</a></p>
+    <p>🔗 <a href="https://www.linkedin.com" target="_blank">LinkedIn</a></p>
+    <a href="resume.pdf" download class="btn">⬇️ Download Resume</a>
+  </section>
+
+  <footer>
+    <p>© 2025 Phya Williams</p>
+  </footer>
+
+  <!-- JAVASCRIPT -->
+  <script>
+    // DARK MODE TOGGLE
+    const toggleBtn = document.getElementById("dark-toggle");
+    toggleBtn.addEventListener("click", () => {
+      document.body.classList.toggle("dark");
+      toggleBtn.textContent = document.body.classList.contains("dark") ? "☀️ Light" : "🌙 Dark";
+    });
+
+    // SCROLL ANIMATIONS
+    const sections = document.querySelectorAll("section");
+    const revealOnScroll = () => {
+      const triggerBottom = window.innerHeight * 0.85;
+      sections.forEach(section => {
+        const top = section.getBoundingClientRect().top;
+        if (top < triggerBottom) {
+          section.classList.add("visible");
+        }
+      });
+    };
+    window.addEventListener("scroll", revealOnScroll);
+    revealOnScroll(); // initial check
+  </script>
+</body>
+</html>
