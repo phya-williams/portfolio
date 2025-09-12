@@ -6,7 +6,7 @@
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
   <title>Phya Williams | Cloud Engineer Portfolio</title>
   <style>
-    /* --- GLOBAL STYLES --- */
+/* --- GLOBAL STYLES --- */
 body {
   margin: 0;
   font-family: "Inter", sans-serif;
@@ -15,142 +15,21 @@ body {
   color: #3c2a4d;
   scroll-behavior: smooth;
   transition: background 0.3s, color 0.3s;
+  font-weight: 400;
 }
 h1, h2, h3 {
-  color: #3c2a4d;
-  transition: color 0.3s;
-}
-a {
-  text-decoration: none;
-  color: inherit;
-}
-section {
-  padding: 60px 20px;
-  max-width: 1000px;
-  margin: auto;
-  opacity: 0;
-  transform: translateY(30px);
-  transition: all 0.6s ease-out;
-}
-section.visible {
-  opacity: 1;
-  transform: translateY(0);
-}
-
-/* --- NAVBAR --- */
-nav {
-  position: sticky;
-  top: 0;
-  background: linear-gradient(90deg, #f7c6d9, #cbb7f0, #a7c7e7, #b2e2c9);
-  color: #3c2a4d;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  gap: 20px;
-  padding: 15px;
-  z-index: 10;
-}
-nav a {
-  color: #3c2a4d;
+  font-family: "Inter", sans-serif;
   font-weight: 600;
+  color: #3c2a4d;
   transition: color 0.3s;
-}
-nav a:hover {
-  color: #6a4c93;
-}
-#dark-toggle {
-  margin-left: auto;
-  cursor: pointer;
-  background: #3c2a4d;
-  color: #fff;
-  border: none;
-  padding: 8px 12px;
-  border-radius: 6px;
-  font-weight: bold;
-  transition: 0.3s;
-}
-#dark-toggle:hover {
-  background: #fff;
-  color: #3c2a4d;
-}
-
-/* --- HERO --- */
-.hero {
-  text-align: center;
-  background: linear-gradient(to right, #f7c6d9, #cbb7f0, #a7c7e7);
-  color: #3c2a4d;
-  padding: 100px 20px;
 }
 .hero h1 {
   font-size: 3em;
   font-weight: 700;
-}
-.hero p {
-  margin: 10px 0;
-  font-size: 1.1em;
-}
-.btn {
-  display: inline-block;
-  background: #3c2a4d;
-  color: #fff;
-  padding: 10px 20px;
-  border-radius: 6px;
-  margin-top: 15px;
-  font-weight: bold;
-  transition: 0.3s;
-}
-.btn:hover {
-  background: #f7c6d9;
-  color: #3c2a4d;
+  letter-spacing: -0.5px;
 }
 
-/* --- EXPERIENCE & PROJECT CARDS --- */
-.card {
-  background: #fff;
-  padding: 20px;
-  margin: 15px 0;
-  border-radius: 8px;
-  border: 2px solid #e0d7f5;
-  box-shadow: 0 4px 12px rgba(0,0,0,0.08);
-  transition: background 0.3s, color 0.3s, transform 0.2s;
-}
-.card h3 {
-  margin-top: 0;
-  color: #6a4c93;
-}
-.card:hover {
-  transform: translateY(-4px);
-}
-
-/* --- SKILLS --- */
-.skills-grid {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 10px;
-}
-.skill {
-  background: #e6f0ff;
-  padding: 10px 15px;
-  border-radius: 20px;
-  font-size: 0.9em;
-  font-weight: 500;
-  color: #3c2a4d;
-  transition: background 0.3s;
-}
-.skill:hover {
-  background: #f7c6d9;
-}
-
-/* --- FOOTER --- */
-footer {
-  text-align: center;
-  padding: 20px;
-  background: linear-gradient(90deg, #f7c6d9, #cbb7f0, #a7c7e7, #b2e2c9);
-  color: #3c2a4d;
-  transition: background 0.3s;
-}
-
-/* --- DARK MODE --- */
+/* Dark Mode */
 body.dark {
   background: #1e1e2e;
   color: #f5f5f5;
@@ -158,25 +37,10 @@ body.dark {
 body.dark h1, body.dark h2, body.dark h3 {
   color: #f7c6d9;
 }
-body.dark nav {
-  background: #2c2c3e;
+/* Override hero name to keep a dark tone in dark mode */
+body.dark .hero h1 {
+  color: #3c2a4d; /* stays bold + dark */
 }
-body.dark nav a {
-  color: #f7c6d9;
-}
-body.dark .card {
-  background: #2c2c3e;
-  color: #f5f5f5;
-}
-body.dark .skill {
-  background: #3c2a4d;
-  color: #fff;
-}
-body.dark footer {
-  background: #2c2c3e;
-  color: #f7c6d9;
-}
-
   </style>
 </head>
 <body>
